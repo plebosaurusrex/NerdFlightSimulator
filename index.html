@@ -2230,6 +2230,12 @@ function drawHudTutorial(){
   // always draw the HUD bar backgrounds
   ctx.fillStyle='rgba(0,0,0,0.75)'; ctx.fillRect(0,0,W(),24);
   const bh=80; ctx.fillStyle='rgba(0,0,0,0.75)'; ctx.fillRect(0,H()-bh,W(),bh);
+  // vessel name at centre of top bar
+  if(vesselName){
+    ctx.fillStyle='#77ee88'; ctx.font='12px "Share Tech Mono",monospace';
+    ctx.textBaseline='middle'; ctx.textAlign='center';
+    ctx.fillText(vesselName, W()/2, 12);
+  }
 
   // dim overlay over the whole scene
   ctx.fillStyle='rgba(0,0,0,0.5)'; ctx.fillRect(0,0,W(),H());
