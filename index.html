@@ -1620,8 +1620,6 @@ function handleCommand(cmd){
       if(obj&&obj.ship&&!obj.ship.evil&&obj.warned){
         obj.warned=false;
         found=true;
-        // reset tutorial so it can show again next time they fire on a friendly
-        friendlyFireTutShown=false;
         const replies=[
           '[COMM] ...Fine. Watch where you point that thing.',
           '[COMM] Consider this a warning. Do not do that again.',
